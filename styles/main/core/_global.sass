@@ -1,0 +1,29 @@
+body
+  background: #fff
+  color: $color-dark
+  font:
+    size: 1rem
+    family: $font-regular
+  letter-spacing: $letter-spacing
+
+small
+  font-size: 0.85rem
+
+strong
+  font-weight: 700
+
+em
+  font-style: italic
+
+del
+  +opacity(0.5)
+
+  text-decoration: line-through
+
+a
+  @extend %link
+
+button
+  +transition(all 0.1s)
+
+  cursor: pointer

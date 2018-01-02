@@ -1,0 +1,15 @@
+{
+  "name": "s2it-frontend",
+  "authors": [
+    "James Clébio <jamesclebio@gmail.com>"
+  ],
+  "description": "s2it front-end practical test",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

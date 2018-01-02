@@ -1,0 +1,83 @@
+=grid($name, $columns, $gutter: 5%)
+  .#{$name}
+    +display-flex
+    +flex-direction(row)
+    +flex-wrap(nowrap)
+    +justify-content(flex-start)
+    +align-items(stretch)
+
+    width: 100%
+
+    &.x-center
+      +justify-content(center)
+
+    &.x-end
+      +justify-content(flex-end)
+
+    &.x-justify
+      +justify-content(space-between)
+
+    &.y-start
+      +align-items(flex-start)
+
+    &.y-center
+      +align-items(center)
+
+    &.y-end
+      +align-items(flex-end)
+
+    &.nogap
+      > .item
+        margin-right: 0
+
+    &[class*="columns-"]
+      +flex-wrap(wrap)
+
+    @for $i from 1 through $columns
+      &.columns-#{$i}
+        > .item
+          width: (100% / $i) - (($gutter * ($i - 1)) / $i)
+          margin-bottom: 30px
+
+          &:nth-child(#{$i}n)
+            margin-right: 0
+
+          &:nth-last-child(-n + #{$i})
+            margin-bottom: 0
+
+        &.nogap
+          > .item
+            width: 100% / $i
+            margin: 0
+
+    > .item
+      +box-sizing(border-box)
+
+      width: 100%
+      margin-right: $gutter
+
+      &:last-child
+        margin-right: 0
+
+    @for $i from 1 through $columns
+      > .size-#{$i}
+        width: (100% / $columns) * $i
+
+    // Responsiveness
+    +screen(map-get($screen, 'medium'))
+      +flex-wrap(wrap)
+
+      &[class*="columns-"]
+        > .item
+          width: 100%
+
+        &.nogap
+          > .item
+            width: 100%
+
+      > .item
+        width: 100%
+        margin: 0 0 20px !important
+
+        &:last-child
+          margin-bottom: 0 !important
