@@ -1,27 +1,76 @@
 # TESTE FRONTEND S2IT
 
-Você deve implementar um jogo, onde o jogador que ficar com 0% de vida perde.
+A solução para o teste está disponível em [http://jamesclebio.github.io/s2it-frontend/](http://jamesclebio.github.io/s2it-frontend/).
 
-### O teste deve conter as seguintes features:
+* JavaScript
+  - VanillaJS
+  - ES6
+  - Module Pattern
 
-* Cada jogador deve começar com 100% de vida
-* Dois botões, sendo um para cada jogador poder atacar o adversário
-* Cada ataque remove 20% de vida do jogador adversário
-* Um botão para reiniciar o jogo
-* Quando o jogador ficar com 0% de vida, deve exibir uma mensagem informando quem é o vencedor
+* CSS
+  - Sass (Sass syntax) / Compass
 
-Abaixo segue o mock da tela:
+## Ambiente
 
-![alt text](https://raw.githubusercontent.com/s2it-frontend/desafio/master/mock/01.jpg "Mock")
+### Requisitos
 
-### Dicas
+* [Node.js](https://nodejs.org/) + [npm](https://www.npmjs.com/)
+* [gulp.js](https://gulpjs.com/)
+* [Bower](https://bower.io/)
+* [Compass](compass-style.org/)
+* [Babel](https://babeljs.io/)
+* [Browsersync](https://browsersync.io/)
+* [JSHint](http://jshint.com/)
+* [EditorConfig](http://editorconfig.org/)
 
-Lembre-se que isto é apenas um mock e nós estamos aberto a novas ideias.
+### Instalação
 
-Não é regra usar frameworks, mas caso queira, tente usar os mais novos.
+Dependências npm:
 
-O design é muito importante, mas o UX é mais.
+```
+npm i
+```
 
-Testes também fazem a diferença.
+Dependências Bower:
 
-#### Faça um fork deste repositório e boa sorte!
+```
+bower i
+```
+
+## Comandos gulp.js
+
+Iniciar Browsersync em *http://localhost:3000* (proxy):
+
+```
+gulp dev
+```
+
+Gerar fontes em */assets/fonts/*:
+
+```
+gulp fonts
+```
+
+Gerar JavaScript em */assets/scripts/*:
+
+```
+gulp scripts
+```
+
+Gerar CSS em */assets/styles/*:
+
+```
+gulp styles
+```
+
+Gerar build em */dist/*:
+
+```
+gulp build
+```
+
+Listar todos os comandos:
+
+```
+gulp
+```
