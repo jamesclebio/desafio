@@ -39,7 +39,7 @@ bower i
 
 ## Comandos gulp.js
 
-Iniciar Browsersync em *http://localhost:3000* (proxy):
+Iniciar Browsersync em *localhost*:
 
 ```
 gulp dev
