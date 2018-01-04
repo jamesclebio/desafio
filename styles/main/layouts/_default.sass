@@ -1,0 +1,36 @@
+body
+  +transition(background-position 0.5s)
+
+  width: 100%
+  height: 100%
+  overflow: hidden
+  background:
+    color: nth($color-custom, 1)
+    image: image-url('cloud.svg'), image-url('cloud.svg'), linear-gradient(to bottom, transparent 80vh, $color-success 80vh), linear-gradient(to top, nth($color-custom, 1), darken(nth($color-custom, 1), 30%))
+    position: 80% 20px, 20% 20px, 0 0, 0 0
+    repeat: no-repeat
+    size: 200px auto, 200px auto, auto 100vh, auto 100vh
+
+  &.playing
+    background-position: 150% 20px, -150% 20px, 0 0, 0 0
+
+    #player1
+      +translateX(320px)
+
+    #player2
+      +translateX(-320px)
+
+  &.finalized
+    .pane
+      .winner
+        display: block
+
+    .player
+      .attack
+        +opacity(0.5)
+
+        pointer-events: none
+
+  // Responsiveness
+  +screen(map-get($screen, 'small'))
+    background-size: 30vw auto, 30vw auto, auto 100vh, auto 100vh

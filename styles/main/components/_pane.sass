@@ -1,0 +1,50 @@
+.pane
+  padding-top: 150px
+  text-align: center
+
+  .winner
+    +text-shadow(1px 1px 2px darken(nth($color-custom, 1), 30%))
+
+    display: none
+    margin-bottom: 30px
+    color: #fff
+    font:
+      weight: 700
+      size: 2.5rem
+    letter-spacing: -0.05em
+
+    &:before
+      +icon('\f091')
+
+      display: block
+      margin-bottom: 15px
+      font-size: 80px
+
+  .button
+    +border-radius($border-radius)
+
+    padding: 15px 30px
+    border: 2px solid #fff
+    outline: 0
+    background: none
+    color: #fff
+    font:
+      weight: 700
+      size: 1.5rem
+    letter-spacing: -0.01em
+
+    &:focus,
+    &:hover
+      background: #fff
+      color: darken(nth($color-custom, 1), 20%)
+
+
+  // Responsiveness
+  +screen(map-get($screen, 'small'))
+    padding-top: 10vh
+
+    .winner
+      font-size: 2rem
+
+      &:before
+        font-size: 40px

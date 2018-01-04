@@ -4,11 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>s2it front-end</title>
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
+  <!-- Pane -->
+  <div class="pane">
+    <div class="winner"></div>
+    <button class="button new">Novo jogo</button>
+  </div>
 
+  <!-- Player 1 -->
+  <div class="player" id="player1">
+    <h2 class="name">Jogador 1</h2>
+    <button class="attack">Atacar</button>
+    <div class="lifebar">
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Player 2 -->
+  <div class="player" id="player2">
+    <h2 class="name">Jogador 2</h2>
+    <button class="attack">Atacar</button>
+    <div class="lifebar">
+      <div></div>
+    </div>
+  </div>
 
   <script src="assets/scripts/main.js"></script>
 </body>

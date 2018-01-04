@@ -27,10 +27,7 @@ gulp.task('dev', () => {
   });
 
   gulp
-    .watch([
-      'views/**/*.html',
-      'index.html'
-    ])
+    .watch('index.html')
     .on('change', browserSync.reload);
 
   gulp
@@ -60,7 +57,9 @@ gulp.task('scripts', () => {
     .pipe(plumber())
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(babel())
+    .pipe(babel({
+      presets: ['env']
+    }))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('assets/scripts'))
     .pipe(browserSync.stream());
